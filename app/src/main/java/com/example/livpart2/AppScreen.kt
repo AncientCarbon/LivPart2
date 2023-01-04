@@ -13,8 +13,15 @@ import androidx.navigation.compose.rememberNavController
 import com.example.livpart2.ui.theme.viewModel
 
 enum class Screen(val route: String) {
-    StartScreen("startScreen"),
-    LoginScreen("loginScreen")
+    OnboardingScreen("onboardingScreen"),
+    LoginScreen("loginScreen"),
+    RegisterOrLoginScreen("registerOrLoginScreen"),
+    RegisterScreen("registerScreen"),
+    ChatBotScreen("chatBotScreen"),
+    DashScreen("dashScreen"),
+    DailyActivityOverviewScreen("dailyActivityOverviewScreen"),
+    SettingsScreen("SettingsScreen"),
+    ProfileScreen("profileScreen")
 }
 
 
@@ -31,11 +38,11 @@ fun AppScreen(
 
         NavHost(
             navController = navController,
-            startDestination = Screen.StartScreen.route,
+            startDestination = Screen.OnboardingScreen.route,
             modifier = modifier.padding(innerPadding)
         ){
             composable(route = Screen.LoginScreen.route) {
-                //use LoginScreen() here
+                OnboardingScreen(onContinueClicked = { /*TODO*/ })
             }
         }
     }
