@@ -1,5 +1,6 @@
 package com.example.livpart2
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -20,7 +21,7 @@ enum class Screen(val route: String) {
 @Composable
 fun AppScreen(
     modifier: Modifier = Modifier,
-    viewModel: viewModel = viewModel()
+    viewModel: viewModel = viewModel(),
     navController: NavHostController = rememberNavController()
     ) {
     //body
@@ -30,7 +31,7 @@ fun AppScreen(
 
         NavHost(
             navController = navController,
-            startDestination = Screen.StartScreen.route
+            startDestination = Screen.StartScreen.route,
             modifier = modifier.padding(innerPadding)
         ){
             composable(route = Screen.LoginScreen.route) {
@@ -39,3 +40,6 @@ fun AppScreen(
         }
     }
 }
+
+
+
