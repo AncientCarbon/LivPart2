@@ -34,15 +34,22 @@ class MainActivity : ComponentActivity() {
 fun MyApp(modifier: Modifier = Modifier){
     Surface(modifier = modifier
         .fillMaxSize()){
-
         Column(modifier = Modifier
-            .padding(24.dp)
-            .background(MaterialTheme.colors.background),
+                .padding(24.dp)
+                .background(MaterialTheme.colors.background),
+                verticalArrangement = Arrangement.Top,
+        ) {
+            Back()
+        }
+        Column(modifier = Modifier
+                .padding(100.dp)
+                .background(MaterialTheme.colors.background),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Header()
         }
+
         Column(modifier = Modifier.padding(bottom = 100.dp),
             verticalArrangement = Arrangement.Center,
 
@@ -107,10 +114,26 @@ fun Press(){
         onClick = { },
         shape = RoundedCornerShape(50.dp),
         modifier = Modifier
-            .padding(top = 24.dp)
-            .width(150.dp)
-            .height(50.dp)
+                .padding(top = 24.dp)
+                .width(150.dp)
+                .height(50.dp)
     ) {
         Text(text = "Login")
+    }
+}
+
+@Composable
+fun Back(){
+    Button(
+            onClick = { },
+            shape = RoundedCornerShape(50.dp),
+            modifier = Modifier
+                    .padding(bottom = 150.dp)
+                    .padding()
+
+                    .width(100.dp)
+                    .height(35.dp)
+    ) {
+        Text(text = "Back")
     }
 }
