@@ -3,15 +3,14 @@ package com.example.livpart2
 import android.annotation.SuppressLint
 import android.media.Image
 import android.os.Bundle
+import android.view.Window
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -51,8 +50,9 @@ fun MyApp(modifier: Modifier = Modifier){
                 LivLogo()
 
         }
-        Column(modifier = Modifier.padding(24.dp),
+        Column(modifier = Modifier.padding(top = 150.dp),
             verticalArrangement = Arrangement.Center,
+
             horizontalAlignment = Alignment.CenterHorizontally){
             Login()
             Register()
@@ -79,8 +79,12 @@ fun LivLogo(){
 @Composable
 fun Login(){
     Button(onClick = {
+
         // direct to login screen
-    }) {
+    },
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)
+    ) {
+
         Text("Log in")
     }
 
@@ -91,7 +95,9 @@ fun Login(){
 fun Register(){
     Button(onClick = {
         //direct to register or 3rd party registration screen
-    }) {
+    },
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)
+    ) {
         Text("Register")
     }
 }
@@ -100,8 +106,11 @@ fun Register(){
 fun AsGuest(){
     Button(onClick = {
 
-    }) {
+    },
+        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)
+    ) {
         Text("Continue as guest")
+
     }
 }
 
