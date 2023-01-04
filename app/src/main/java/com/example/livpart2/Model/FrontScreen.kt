@@ -19,7 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role.Companion.Image
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.livpart2.MyApp
+import com.example.livpart2.LoginScreen
 import com.example.livpart2.R
 import com.example.livpart2.ui.theme.Background
 import com.example.livpart2.ui.theme.LivPart2Theme
