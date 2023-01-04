@@ -8,10 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -59,7 +56,7 @@ fun OnboardingScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Welcome to the Basics Codelab!")
+        Text("Welcome to Liv!")
         Button(
             modifier = Modifier.padding(vertical = 24.dp),
             onClick = onContinueClicked
@@ -72,11 +69,11 @@ fun OnboardingScreen(
 @Composable
 private fun Greetings(
     modifier: Modifier = Modifier,
-    names: List<String> = listOf("World", "Compose")
+    onboarding: List<String> = listOf("Integrate Health App", "Connect Bluetooth", "Sync Calender", "Give Access to Location", "Enable Notifications")
 ) {
     Column(modifier = modifier.padding(vertical = 4.dp)) {
-        for (name in names) {
-            Greeting(name = name)
+        for (question in onboarding) {
+            Greeting(question = question)
         }
     }
 }
@@ -90,29 +87,27 @@ fun OnboardingPreview() {
 }
 
 @Composable
-private fun Greeting(name: String) {
+private fun Greeting(question: String) {
 
     val expanded = remember { mutableStateOf(false) }
 
     val extraPadding = if (expanded.value) 48.dp else 0.dp
 
+    val checkState = remember{ mutableStateOf(false) }
+
     Surface(
         color = MaterialTheme.colors.background,
-        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
+        modifier = Modifier.padding(vertical = 20.dp, horizontal = 8.dp)
     ) {
-        Row(modifier = Modifier.padding(24.dp)) {
+        Row(modifier = Modifier.padding(20.dp)) {
             Column(modifier = Modifier
                 .weight(1f)
                 .padding(bottom = extraPadding)
             ) {
-                Text(text = "Hello, ")
-                Text(text = name)
+                Text(text = "Do you want to,")
+                Text(text = question)
             }
-            Button(
-                onClick = { expanded.value = !expanded.value }
-            ) {
-                Text(if (expanded.value) "Show less" else "Show more")
-            }
+            Switch(checked = checkState.value, onCheckedChange = {checkState.value = it})
         }
     }
 }
