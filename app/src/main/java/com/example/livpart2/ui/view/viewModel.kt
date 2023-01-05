@@ -1,4 +1,4 @@
-package com.example.livpart2.ui.theme
+package com.example.livpart2.ui.view
 
 import androidx.lifecycle.ViewModel
 import com.example.livpart2.dataPack.UiState

@@ -1,4 +1,4 @@
-package com.example.livpart2
+package com.example.livpart2.ui.screens
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
@@ -10,7 +10,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.livpart2.ui.theme.viewModel
+import com.example.livpart2.OnboardingScreen
+import com.example.livpart2.ui.view.viewModel
 
 enum class Screen(val route: String) {
     OnboardingScreen("onboardingScreen"),
