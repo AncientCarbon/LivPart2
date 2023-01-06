@@ -38,7 +38,6 @@ fun RegisterOrLoginApp(modifier: Modifier = Modifier){
 
         }
     }
-
 }
 
 @Composable
