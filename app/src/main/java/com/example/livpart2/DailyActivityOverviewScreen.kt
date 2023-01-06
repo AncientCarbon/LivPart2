@@ -1,6 +1,7 @@
 package com.example.livpart2
 
 import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.ScrollableState
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,13 +11,18 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+    //seems like the scrollable parameter needs to be added to the
+    // parameters of the function, and NOT the surface or column
+
 
 @Composable
-fun DailyActivityOverviewApp(){
-    Surface(modifier = Modifier
-        .fillMaxSize()
-        .scrollable(state = rememberScrollState(), orientation = Orientation.Vertical)) {
-        Column (modifier = Modifier.fillMaxSize().scrollable(state = rememberScrollState(), orientation = Orientation.Vertical)){
+fun DailyActivityOverviewApp() {
+    Surface(
+        modifier = Modifier
+            .fillMaxSize()
+            .scrollable(state = rememberScrollState(), orientation = Orientation.Vertical)
+    ) {
+        Column() {
             for (hour in 0 until 24) {
                 Row {
                     Text("$hour:00")
