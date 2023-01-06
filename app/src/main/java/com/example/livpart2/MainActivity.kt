@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LivPart2Theme {
-                MyApp(modifier = Modifier.fillMaxSize())
+                DailyActivityOverviewApp()
             }
         }
     }
