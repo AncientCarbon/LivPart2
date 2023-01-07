@@ -8,10 +8,13 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-    //seems like the scrollable parameter needs to be added to the
+import androidx.compose.ui.modifier.modifierLocalConsumer
+
+//seems like the scrollable parameter needs to be added to the
     // parameters of the function, and NOT the surface or column
 
 
@@ -20,9 +23,8 @@ fun DailyActivityOverviewApp() {
     Surface(
         modifier = Modifier
             .fillMaxSize()
-            .scrollable(state = rememberScrollState(), orientation = Orientation.Vertical)
     ) {
-        Column() {
+        Column(modifier = Modifier.verticalScroll(rememberScrollState()) ) {
             for (hour in 0 until 24) {
                 Row {
                     Text("$hour:00")
