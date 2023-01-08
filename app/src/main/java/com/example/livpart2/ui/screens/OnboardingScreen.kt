@@ -10,7 +10,7 @@ import androidx.compose.ui.unit.dp
 import com.example.livpart2.ui.theme.LivPart2Theme
 
 @Composable
-fun MyApp(modifier: Modifier = Modifier) {
+fun OnboardingApp(modifier: Modifier = Modifier) {
 
     var shouldShowOnboarding by remember { mutableStateOf(true) }
 
@@ -109,6 +109,6 @@ fun DefaultPreview() {
 @Composable
 fun MyAppPreview() {
     LivPart2Theme {
-        MyApp(Modifier.fillMaxSize())
+        OnboardingApp(Modifier.fillMaxSize())
     }
 }

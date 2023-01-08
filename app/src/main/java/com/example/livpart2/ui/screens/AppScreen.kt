@@ -43,6 +43,7 @@ fun AppScreen(
             modifier = modifier.padding(innerPadding)
         ){
             composable(route = Screen.LoginScreen.route) {
+                LoginApp()
                 OnboardingScreen(onContinueClicked = { /*TODO*/ })
             }
         }

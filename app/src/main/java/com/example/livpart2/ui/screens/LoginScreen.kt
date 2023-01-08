@@ -18,7 +18,12 @@ import androidx.compose.ui.unit.sp
 
 @Preview(showBackground = true)
 @Composable
-fun MyApp(modifier: Modifier = Modifier) {
+fun LoginApp() {
+    LoginScreen()
+}
+
+@Composable
+fun LoginScreen(modifier: Modifier = Modifier) {
     Surface(modifier = modifier
         .fillMaxSize()) {
         Column(
@@ -45,7 +50,7 @@ fun MyApp(modifier: Modifier = Modifier) {
             Username1()
             Password1()
             ForgotUsername()
-            ForgotPassword()
+            CreateUser()
             Press1()
         }
     }
@@ -56,6 +61,7 @@ fun MyApp(modifier: Modifier = Modifier) {
 Text input created following guide
 https://developer.android.com/jetpack/compose/text
  */
+
 @Composable
 fun Username1() {
     var text by remember { mutableStateOf("") }
@@ -84,12 +90,12 @@ fun Header() {
 
 @Composable
 fun ForgotUsername() {
-    ClickableText(onClick = {}, text = AnnotatedString("Forgot Username?"), style = TextStyle(textDecoration = TextDecoration.Underline))
+    ClickableText(onClick = {}, text = AnnotatedString("Forgot Password or Username?"), style = TextStyle(textDecoration = TextDecoration.Underline))
 }
 
 @Composable
-fun ForgotPassword() {
-    ClickableText(onClick = {}, text = AnnotatedString("Forgot Password?"), style = TextStyle(textDecoration = TextDecoration.Underline))
+fun CreateUser() {
+    ClickableText(onClick = {}, text = AnnotatedString("Create User"), style = TextStyle(textDecoration = TextDecoration.Underline))
 }
 
 /*
