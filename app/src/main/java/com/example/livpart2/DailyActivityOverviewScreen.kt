@@ -40,5 +40,6 @@ fun DailyActivityOverviewApp() {
                 Text("Save")
             }
         }
+        BotNav()
     }
 }

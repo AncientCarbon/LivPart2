@@ -18,8 +18,8 @@ fun ChatBotApp(modifier: Modifier = Modifier) {
             .fillMaxSize()) {
         Column(
                 modifier = Modifier
-                        .padding()
-                        .background(MaterialTheme.colors.background),
+                    .padding()
+                    .background(MaterialTheme.colors.background),
                 verticalArrangement = Arrangement.Top,
         ) {
         }
@@ -38,6 +38,7 @@ fun ChatBotApp(modifier: Modifier = Modifier) {
             SendButton()
 
         }
+        BotNav()
     }
 
 }

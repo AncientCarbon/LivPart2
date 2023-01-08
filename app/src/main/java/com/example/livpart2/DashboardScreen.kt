@@ -63,19 +63,7 @@ fun DashboardApp(modifier: Modifier = Modifier) {
             Trend2()
 
         }
-        Row(
-            modifier = Modifier
-                .padding(24.dp),
-            verticalAlignment = Alignment.Bottom,
-            horizontalArrangement = Arrangement.spacedBy(20.dp)
-
-        ) {
-            ChatbotButton()
-            DashboardButton()
-            DailyActivityButton()
-            ProfileButton()
-            SettingsButton()
-        }
+        BotNav()
     }
 }
 
