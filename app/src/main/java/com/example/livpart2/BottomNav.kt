@@ -8,6 +8,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -16,13 +17,14 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun BottomNav(modifier: Modifier = Modifier) {
     Surface(modifier = modifier
-            .fillMaxSize()) {
-        Column(
+            ) {
+        Row(
                 modifier = Modifier
-                    .padding(24.dp)
-                    .background(MaterialTheme.colors.background),
-                verticalArrangement = Arrangement.Bottom,
-        ) {
+                    .padding(24.dp),
+                verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.spacedBy(20.dp)
+
+            ) {
             ChatbotButton()
             DashboardButton()
             DailyActivityButton()
@@ -43,7 +45,7 @@ fun ChatbotButton(){
             modifier = Modifier
                 .padding(top = 24.dp)
                 .width(50.dp)
-                .height(75.dp)
+                .height(50.dp)
     ) {
         Text(text = "Chat")
     }
