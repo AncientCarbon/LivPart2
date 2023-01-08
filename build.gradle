@@ -1,4 +1,11 @@
 buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.13'
+    }
     ext {
         compose_version = '1.1.0-beta01'
     }
@@ -12,3 +19,10 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+/*
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}*/

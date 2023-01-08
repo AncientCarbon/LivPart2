@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "480067166847",
+    "project_id": "liv-app-dtu",
+    "storage_bucket": "liv-app-dtu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480067166847:android:2d94df442508916d92554a",
+        "android_client_info": {
+          "package_name": "com.example.livpart2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480067166847-9hcrbq6ulhfjgvs20h390dbnadqjf7eu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsq_xmDgkuMaiaKCpu8ZnlAj_6EagExlE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480067166847-9hcrbq6ulhfjgvs20h390dbnadqjf7eu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
