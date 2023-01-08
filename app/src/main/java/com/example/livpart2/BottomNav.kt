@@ -19,11 +19,15 @@ fun BottomNav(modifier: Modifier = Modifier) {
             .fillMaxSize()) {
         Column(
                 modifier = Modifier
-                        .padding(24.dp)
-                        .background(MaterialTheme.colors.background),
+                    .padding(24.dp)
+                    .background(MaterialTheme.colors.background),
                 verticalArrangement = Arrangement.Bottom,
         ) {
             ChatbotButton()
+            DashboardButton()
+            DailyActivityButton()
+            ProfileButton()
+            SettingsButton()
         }
 
 
@@ -37,12 +41,68 @@ fun ChatbotButton(){
             onClick = { },
             shape = RoundedCornerShape(50.dp),
             modifier = Modifier
-                    .padding(top = 24.dp)
-                    .width(50.dp)
-                    .height(75.dp)
+                .padding(top = 24.dp)
+                .width(50.dp)
+                .height(75.dp)
     ) {
         Text(text = "Chat")
     }
 }
 
+
+@Composable
+fun DashboardButton(){
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(50.dp),
+        modifier = Modifier
+            .padding(top = 24.dp)
+            .width(50.dp)
+            .height(50.dp)
+    ) {
+        Text(text = "Dash")
+    }
+}
+
+@Composable
+fun DailyActivityButton(){
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(50.dp),
+        modifier = Modifier
+            .padding(top = 24.dp)
+            .width(50.dp)
+            .height(50.dp)
+    ) {
+        Text(text = "Act")
+    }
+}
+
+@Composable
+fun ProfileButton(){
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(50.dp),
+        modifier = Modifier
+            .padding(top = 24.dp)
+            .width(50.dp)
+            .height(50.dp)
+    ) {
+        Text(text = "you")
+    }
+}
+
+@Composable
+fun SettingsButton(){
+    Button(
+        onClick = { },
+        shape = RoundedCornerShape(50.dp),
+        modifier = Modifier
+            .padding(top = 24.dp)
+            .width(50.dp)
+            .height(50.dp)
+    ) {
+        Text(text = "Sett")
+    }
+}
 
