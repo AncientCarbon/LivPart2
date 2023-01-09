@@ -66,6 +66,7 @@ fun ProfileApp(modifier: Modifier = Modifier) {
     }
 }
 
+
 @Composable
 fun Goals(){
     Button(onClick = { /*TODO*/ }, modifier = Modifier
