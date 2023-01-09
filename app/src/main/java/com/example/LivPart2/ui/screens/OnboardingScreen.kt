@@ -1,4 +1,4 @@
-package com.example.livpart2
+package com.example.LivPart2
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -6,7 +6,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.livpart2.destinations.RegisterOrLoginAppDestination
+import com.example.LivPart2.destinations.RegisterOrLoginAppDestination
+
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 

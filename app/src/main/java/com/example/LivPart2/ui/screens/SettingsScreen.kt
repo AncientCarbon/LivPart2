@@ -1,4 +1,4 @@
-package com.example.livpart2.ui.screens
+package com.example.LivPart2.ui.screens
 
 
 import androidx.compose.foundation.layout.*

@@ -1,7 +1,7 @@
-package com.example.livpart2.ui.view
+package com.example.LivPart2.ui.view
 
 import androidx.lifecycle.ViewModel
-import com.example.livpart2.dataPack.UiState
+import com.example.LivPart2.dataPack.UiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

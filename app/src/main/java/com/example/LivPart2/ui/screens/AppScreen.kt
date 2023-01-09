@@ -1,4 +1,4 @@
-package com.example.livpart2.ui.screens
+package com.example.LivPart2.ui.screens
 
 enum class Screen(val route: String) {
     OnboardingScreen("onboardingScreen"),

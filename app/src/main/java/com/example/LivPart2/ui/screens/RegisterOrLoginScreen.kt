@@ -1,4 +1,4 @@
-package com.example.livpart2.ui.screens
+package com.example.LivPart2.ui.screens
 
 
 import androidx.compose.foundation.Image
@@ -11,9 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.composewheel.R
-import com.example.livpart2.destinations.LoginScreenDestination
-import com.example.livpart2.destinations.RegisterAppDestination
+import com.example.LivPart2.R
+import com.example.LivPart2.destinations.LoginScreenDestination
+import com.example.LivPart2.destinations.RegisterAppDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 

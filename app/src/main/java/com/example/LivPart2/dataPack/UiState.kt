@@ -1,4 +1,4 @@
-package com.example.livpart2.dataPack
+package com.example.LivPart2.dataPack
 
 class UiState {
     /*

@@ -1,4 +1,4 @@
-package com.example.livpart2
+package com.example.LivPart2
 
 import org.junit.Test
 

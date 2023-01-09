@@ -1,9 +1,9 @@
-package com.example.livpart2
+package com.example.LivPart2
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.livpart2.ui.theme.LivPart2Theme
+import com.example.LivPart2.ui.theme.LivPart2Theme
 import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 

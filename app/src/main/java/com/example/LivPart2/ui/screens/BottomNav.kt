@@ -1,4 +1,4 @@
-package com.example.livpart2.ui.screens
+package com.example.LivPart2.ui.screens
 
 
 import androidx.compose.foundation.layout.*
@@ -11,17 +11,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.livpart2.destinations.*
-import com.ramcosta.composedestinations.annotation.Destination
+import com.example.LivPart2.destinations.*
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Composable
 fun BotNav(navigator: DestinationsNavigator){
     Row(
-        modifier = Modifier
-            .padding(24.dp),
+        modifier = Modifier.fillMaxWidth().padding(0.dp,10.dp),
         verticalAlignment = Alignment.Bottom,
-        horizontalArrangement = Arrangement.spacedBy(20.dp)
+        horizontalArrangement = Arrangement.SpaceAround
 
     ) {
         ChatbotButton(navigator)

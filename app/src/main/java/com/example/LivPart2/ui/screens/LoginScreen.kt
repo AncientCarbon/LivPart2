@@ -1,4 +1,4 @@
-package com.example.livpart2.ui.screens
+package com.example.LivPart2.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -13,8 +13,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.livpart2.destinations.DailyActivityOverviewAppDestination
-import com.example.livpart2.destinations.SettingsDestination
+import com.example.LivPart2.destinations.DailyActivityOverviewAppDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
