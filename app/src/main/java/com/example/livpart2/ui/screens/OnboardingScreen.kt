@@ -13,14 +13,6 @@ import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
-@Preview
-@Composable
-fun OnboardingPreview() {
-    DestinationsNavHost(navGraph = NavGraphs.root)
-}
-
-
-
 
 @Composable
 fun OnboardingScreen(

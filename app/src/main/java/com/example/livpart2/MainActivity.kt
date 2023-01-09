@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.livpart2.ui.theme.LivPart2Theme
 import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.annotation.Destination
@@ -38,4 +39,10 @@ fun OnboardingApp(
             Greetings(navigator)
         }
     }
+}
+
+@Preview
+@Composable
+fun OnboardingPreview(){
+    DestinationsNavHost(navGraph = NavGraphs.root)
 }
