@@ -5,12 +5,8 @@ import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.compose.rememberNavController
 import com.example.livpart2.destinations.RegisterOrLoginAppDestination
-import com.example.livpart2.ui.screens.RegisterOrLoginApp
-import com.example.livpart2.ui.theme.LivPart2Theme
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
@@ -70,9 +66,10 @@ private fun Greetings(
             GreetingBuilder(question = question)
         }
         Button(
-            onClick = { navigator.navigate(
-                RegisterOrLoginAppDestination
-            )
+            onClick = {
+                navigator.navigate(
+                    RegisterOrLoginAppDestination
+                )
              }
         ) {
             Text("Login or Register")
