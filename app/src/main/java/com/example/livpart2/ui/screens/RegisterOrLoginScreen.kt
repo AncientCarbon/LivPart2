@@ -13,13 +13,19 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composewheel.R
+import com.example.livpart2.destinations.LoginScreenDestination
+import com.example.livpart2.destinations.RegisterAppDestination
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 //import com.example.livpart2.R
 
-
-@Preview(showBackground = true)
+@Destination
 @Composable
-fun RegisterOrLoginApp(modifier: Modifier = Modifier){
+fun RegisterOrLoginApp(
+    navigator: DestinationsNavigator,
+    modifier: Modifier = Modifier
+    ){
     Surface(modifier = modifier
         .fillMaxSize()){
 
@@ -34,9 +40,9 @@ fun RegisterOrLoginApp(modifier: Modifier = Modifier){
             verticalArrangement = Arrangement.Center,
 
             horizontalAlignment = Alignment.CenterHorizontally){
-            Login()
-            Register()
-            AsGuest()
+            Login(navigator)
+            Register(navigator)
+            AsGuest(navigator)
 
         }
     }
@@ -56,10 +62,11 @@ fun LivLogo(){
 
 
 @Composable
-fun Login(){
+fun Login(navigator: DestinationsNavigator){
     Button(onClick = {
-
-        // direct to login screen
+        navigator.navigate(
+            LoginScreenDestination
+        )
     },
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)
     ) {
@@ -71,9 +78,11 @@ fun Login(){
 
 
 @Composable
-fun Register(){
+fun Register(navigator: DestinationsNavigator){
     Button(onClick = {
-        //direct to register or 3rd party registration screen
+        navigator.navigate(
+            RegisterAppDestination
+        )
     },
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)
     ) {
@@ -82,9 +91,12 @@ fun Register(){
 }
 
 @Composable
-fun AsGuest(){
+fun AsGuest(navigator: DestinationsNavigator){
     Button(onClick = {
-
+        navigator.navigate(
+            //TODO: make home screen
+            ""
+        )
     },
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)
     ) {

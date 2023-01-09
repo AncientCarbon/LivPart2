@@ -7,10 +7,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
+import com.example.livpart2.destinations.RegisterOrLoginAppDestination
+import com.example.livpart2.ui.screens.RegisterOrLoginApp
 import com.example.livpart2.ui.theme.LivPart2Theme
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
+@Destination(start = true)
 @Composable
-fun OnboardingApp(modifier: Modifier = Modifier) {
+fun OnboardingApp(
+    navigator: DestinationsNavigator,
+    modifier: Modifier = Modifier
+    ) {
 
     var shouldShowOnboarding by remember { mutableStateOf(true) }
 
@@ -18,7 +27,7 @@ fun OnboardingApp(modifier: Modifier = Modifier) {
         if (shouldShowOnboarding) {
             OnboardingScreen(onContinueClicked = { shouldShowOnboarding = false })
         } else {
-            Greetings()
+            Greetings(navigator)
         }
     }
 }
@@ -45,27 +54,37 @@ fun OnboardingScreen(
     }
 }
 
-
 @Composable
 private fun Greetings(
+    navigator: DestinationsNavigator,
     modifier: Modifier = Modifier,
-    onboarding: List<String> = listOf("Integrate Health App", "Connect Bluetooth", "Sync Calender", "Give Access to Location", "Enable Notifications")
+    onboarding: List<String> = listOf(
+        "Integrate Health App",
+        "Connect Bluetooth",
+        "Sync Calender",
+        "Give Access to Location",
+        "Enable Notifications")
 ) {
     Column(modifier = modifier.padding(vertical = 4.dp)) {
         for (question in onboarding) {
-            Greeting(question = question)
+            GreetingBuilder(question = question)
+        }
+        Button(
+            onClick = { navigator.navigate(
+                RegisterOrLoginAppDestination
+            )
+             }
+        ) {
+            Text("Login or Register")
         }
     }
 }
 
 
 @Composable
-private fun Greeting(question: String) {
-
+private fun GreetingBuilder(question: String) {
     val expanded = remember { mutableStateOf(false) }
-
     val extraPadding = if (expanded.value) 48.dp else 0.dp
-
     val checkState = remember{ mutableStateOf(false) }
 
     Surface(
@@ -88,7 +107,7 @@ private fun Greeting(question: String) {
 
 
 
-
+/*
 @Preview(showBackground = true, widthDp = 320, heightDp = 320)
 @Composable
 fun OnboardingPreview() {
@@ -96,19 +115,22 @@ fun OnboardingPreview() {
         OnboardingScreen(onContinueClicked = {})
     }
 }
+ */
 
-@Preview(showBackground = true, widthDp = 320)
+/*@Preview(showBackground = true, widthDp = 320)
 @Composable
 fun DefaultPreview() {
     LivPart2Theme {
-        Greetings()
+       Greetings(navigator = DestinationsNavigator)
     }
 }
+
 
 @Preview
 @Composable
 fun MyAppPreview() {
     LivPart2Theme {
-        OnboardingApp(Modifier.fillMaxSize())
+        val navController = rememberNavController()
+        OnboardingApp(Modifier.fillMaxSize(), navController)
     }
-}
+}*/

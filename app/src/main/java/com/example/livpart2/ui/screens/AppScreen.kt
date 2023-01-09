@@ -10,7 +10,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.livpart2.OnboardingScreen
+import com.example.livpart2.OnboardingApp
 import com.example.livpart2.ui.view.viewModel
 
 enum class Screen(val route: String) {
@@ -25,30 +25,6 @@ enum class Screen(val route: String) {
     ProfileScreen("profileScreen")
 }
 
-
-@Composable
-fun AppScreen(
-    modifier: Modifier = Modifier,
-    viewModel: viewModel = viewModel(),
-    navController: NavHostController = rememberNavController()
-    ) {
-    //body
-    Scaffold {
-        innerPadding ->
-        val uiState by viewModel.uiState.collectAsState()
-
-        NavHost(
-            navController = navController,
-            startDestination = Screen.OnboardingScreen.route,
-            modifier = modifier.padding(innerPadding)
-        ){
-            composable(route = Screen.LoginScreen.route) {
-                LoginApp()
-                OnboardingScreen(onContinueClicked = { /*TODO*/ })
-            }
-        }
-    }
-}
 
 
 

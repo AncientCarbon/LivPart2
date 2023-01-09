@@ -11,11 +11,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ramcosta.composedestinations.annotation.Destination
 
 
-@Preview(showBackground = true)
+@Destination
 @Composable
-fun RegisterApp(modifier: Modifier = Modifier) {
+fun RegisterApp(
+    modifier: Modifier = Modifier
+    ) {
     Surface(modifier = modifier
         .fillMaxSize()) {
         Column(

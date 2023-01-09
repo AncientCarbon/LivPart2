@@ -14,16 +14,17 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.Navigator
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 
-@Preview(showBackground = true)
+@Destination
 @Composable
-fun LoginApp() {
-    LoginScreen()
-}
-
-@Composable
-fun LoginScreen(modifier: Modifier = Modifier) {
+fun LoginScreen(
+    navigator: DestinationsNavigator,
+    modifier: Modifier = Modifier
+    ) {
     Surface(modifier = modifier
         .fillMaxSize()) {
         Column(
@@ -32,7 +33,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                 .background(MaterialTheme.colors.background),
             verticalArrangement = Arrangement.Top,
         ) {
-            Back1()
+            Back1(navigator)
         }
         Column(modifier = Modifier
             .padding(100.dp)
@@ -49,7 +50,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally) {
             Username1()
             Password1()
-            ForgotUsername()
+            ForgotUsername(navigator)
             CreateUser()
             Press1()
         }
@@ -89,13 +90,21 @@ fun Header() {
 }
 
 @Composable
-fun ForgotUsername() {
-    ClickableText(onClick = {}, text = AnnotatedString("Forgot Password or Username?"), style = TextStyle(textDecoration = TextDecoration.Underline))
+fun ForgotUsername(navigator: DestinationsNavigator) {
+    ClickableText(
+        onClick = {navigator.navigate(
+            //TODO: Make screen
+            ""
+        )},
+        text = AnnotatedString("Forgot Password or Username?"),
+        style = TextStyle(textDecoration = TextDecoration.Underline))
 }
 
 @Composable
 fun CreateUser() {
-    ClickableText(onClick = {}, text = AnnotatedString("Create User"), style = TextStyle(textDecoration = TextDecoration.Underline))
+    ClickableText(onClick = {},
+        text = AnnotatedString("Create User"),
+        style = TextStyle(textDecoration = TextDecoration.Underline))
 }
 
 /*
@@ -117,9 +126,9 @@ fun Press1() {
 }
 
 @Composable
-fun Back1() {
+fun Back1(navigator: DestinationsNavigator) {
     Button(
-        onClick = { },
+        onClick = { navigator.popBackStack()},
         shape = RoundedCornerShape(50.dp),
         modifier = Modifier
             .padding(bottom = 150.dp)
