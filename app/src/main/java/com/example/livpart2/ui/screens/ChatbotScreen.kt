@@ -10,18 +10,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
-
-@Preview(showBackground = true)
+@Destination
 @Composable
-fun ChatBotApp(modifier: Modifier = Modifier) {
+fun ChatBotApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier) {
     Surface(modifier = modifier
         .fillMaxSize()) {
         Column(
             modifier = Modifier
                 .padding()
                 .background(MaterialTheme.colors.background),
-            verticalArrangement = Arrangement.Top,
+            verticalArrangement = Arrangement.Top
         ) {
         }
         Column(modifier = Modifier
@@ -39,7 +40,7 @@ fun ChatBotApp(modifier: Modifier = Modifier) {
             SendButton()
 
         }
-        BotNav()
+        BotNav(navigator)
     }
 
 }

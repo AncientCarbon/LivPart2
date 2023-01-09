@@ -13,12 +13,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Destination
 @Composable
-fun Settings(
+fun Settings(navigator: DestinationsNavigator
 ) {
-    Column(modifier = Modifier.fillMaxSize().padding(all = 30.dp),
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(all = 30.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
 
@@ -48,4 +51,5 @@ fun Settings(
             Text(text = "Help Center", color = Color.White)
         }
     }
+    BotNav(navigator)
 }

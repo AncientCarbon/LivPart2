@@ -11,10 +11,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-
+import com.example.livpart2.destinations.RegisterAppDestination
+import com.example.livpart2.destinations.SettingsDestination
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Composable
-fun BotNav(){
+fun BotNav(navigator: DestinationsNavigator){
     Row(
         modifier = Modifier
             .padding(24.dp),
@@ -22,15 +25,15 @@ fun BotNav(){
         horizontalArrangement = Arrangement.spacedBy(20.dp)
 
     ) {
-        ChatbotButton()
-        DashboardButton()
-        DailyActivityButton()
-        ProfileButton()
-        SettingsButton()
+        ChatbotButton(navigator)
+        DashboardButton(navigator)
+        DailyActivityButton(navigator)
+        ProfileButton(navigator)
+        SettingsButton(navigator)
     }
 }
 @Composable
-fun ChatbotButton(){
+fun ChatbotButton(navigator: DestinationsNavigator){
     Button(
         onClick = { },
         shape = RoundedCornerShape(50.dp),
@@ -46,7 +49,7 @@ fun ChatbotButton(){
 
 
 @Composable
-fun DashboardButton(){
+fun DashboardButton(navigator: DestinationsNavigator){
     Button(
         onClick = { },
         shape = RoundedCornerShape(50.dp),
@@ -62,9 +65,10 @@ fun DashboardButton(){
 }
 
 @Composable
-fun DailyActivityButton(){
+fun DailyActivityButton(navigator: DestinationsNavigator){
     Button(
-        onClick = { },
+        onClick = {
+         },
         shape = RoundedCornerShape(50.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
 
@@ -78,9 +82,9 @@ fun DailyActivityButton(){
 }
 
 @Composable
-fun ProfileButton(){
+fun ProfileButton(navigator: DestinationsNavigator){
     Button(
-        onClick = { },
+        onClick = { /*TODO */ },
         shape = RoundedCornerShape(50.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
 
@@ -94,9 +98,11 @@ fun ProfileButton(){
 }
 
 @Composable
-fun SettingsButton(){
+fun SettingsButton(navigator: DestinationsNavigator){
     Button(
-        onClick = { },
+        onClick = {navigator.navigate(
+            SettingsDestination
+        ) },
         shape = RoundedCornerShape(50.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
 

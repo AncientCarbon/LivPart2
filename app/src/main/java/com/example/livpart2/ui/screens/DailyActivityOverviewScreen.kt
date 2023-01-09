@@ -10,10 +10,12 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
-
+@Destination
 @Composable
-fun DailyActivityOverviewApp() {
+fun DailyActivityOverviewApp(navigator: DestinationsNavigator) {
     Surface(
         modifier = Modifier
             .fillMaxSize()
@@ -34,6 +36,6 @@ fun DailyActivityOverviewApp() {
                 Text("Save")
             }
         }
-        BotNav()
+        BotNav(navigator)
     }
 }

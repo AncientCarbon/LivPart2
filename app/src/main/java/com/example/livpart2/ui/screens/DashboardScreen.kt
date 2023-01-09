@@ -15,13 +15,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import java.text.SimpleDateFormat
 import java.util.*
 
 
-@Preview(showBackground = true)
+@Destination
 @Composable
-fun DashboardApp(modifier: Modifier = Modifier) {
+fun DashboardApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier) {
     Surface(
         modifier = modifier
             .fillMaxSize()
@@ -35,7 +37,6 @@ fun DashboardApp(modifier: Modifier = Modifier) {
             Row(modifier = Modifier.fillMaxWidth()) {
                 DateNow()
                 PlusButton()
-
 
             }
         }
@@ -63,7 +64,7 @@ fun DashboardApp(modifier: Modifier = Modifier) {
             Trend2()
 
         }
-        BotNav()
+        BotNav(navigator)
     }
 }
 
@@ -118,6 +119,6 @@ fun Trend2(){
         Modifier
             .fillMaxWidth()
             .padding(top = 10.dp)) {
-        Text(text = "Prime energy drink sold for more than 700 british pounds", fontSize = 25.sp)
+        Text(text = "Flinke Flemming is flink for more than 2 years in a row without bein not flink", fontSize = 25.sp)
     }
 }
