@@ -126,7 +126,7 @@ fun Press1() {
 @Composable
 fun Back1(navigator: DestinationsNavigator) {
     Button(
-        onClick = { navigator.popBackStack()},
+        onClick = { navigator.navigateUp()},
         shape = RoundedCornerShape(50.dp),
         modifier = Modifier
             .padding(bottom = 150.dp)

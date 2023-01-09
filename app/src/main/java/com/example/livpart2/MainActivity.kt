@@ -12,7 +12,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LivPart2Theme {
-
+                DestinationsNavHost(navGraph = NavGraphs.root)
             }
         }
     }
