@@ -13,6 +13,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.livpart2.destinations.DailyActivityOverviewAppDestination
+import com.example.livpart2.destinations.SettingsDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
@@ -50,7 +52,7 @@ fun LoginScreen(
             Password1()
             ForgotUsername(navigator)
             CreateUser()
-            Press1()
+            Press1(navigator)
         }
     }
 
@@ -110,9 +112,11 @@ Following button created using guide
 https://dev.to/manojbhadane/android-login-screen-using-jetpack-compose-part-1-50pl
  */
 @Composable
-fun Press1() {
-    Button(
-        onClick = { },
+fun Press1(navigator: DestinationsNavigator) {
+    Button( //Add if statement for this on click
+        onClick = { navigator.navigate(
+            DailyActivityOverviewAppDestination
+        )},
         shape = RoundedCornerShape(50.dp),
         modifier = Modifier
             .padding(top = 24.dp)

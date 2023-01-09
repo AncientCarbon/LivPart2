@@ -11,8 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.livpart2.destinations.RegisterAppDestination
-import com.example.livpart2.destinations.SettingsDestination
+import com.example.livpart2.destinations.*
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
@@ -35,7 +34,9 @@ fun BotNav(navigator: DestinationsNavigator){
 @Composable
 fun ChatbotButton(navigator: DestinationsNavigator){
     Button(
-        onClick = { },
+        onClick = { navigator.navigate(
+            ChatBotAppDestination
+        )},
         shape = RoundedCornerShape(50.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
         modifier = Modifier
@@ -51,7 +52,9 @@ fun ChatbotButton(navigator: DestinationsNavigator){
 @Composable
 fun DashboardButton(navigator: DestinationsNavigator){
     Button(
-        onClick = { },
+        onClick = { navigator.navigate(
+            DashboardAppDestination
+        )},
         shape = RoundedCornerShape(50.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
 
@@ -67,7 +70,9 @@ fun DashboardButton(navigator: DestinationsNavigator){
 @Composable
 fun DailyActivityButton(navigator: DestinationsNavigator){
     Button(
-        onClick = {
+        onClick = {navigator.navigate(
+            DailyActivityOverviewAppDestination
+        )
          },
         shape = RoundedCornerShape(50.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
@@ -84,7 +89,9 @@ fun DailyActivityButton(navigator: DestinationsNavigator){
 @Composable
 fun ProfileButton(navigator: DestinationsNavigator){
     Button(
-        onClick = { /*TODO */ },
+        onClick = { navigator.navigate(
+            ProfileAppDestination
+        ) },
         shape = RoundedCornerShape(50.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
 
