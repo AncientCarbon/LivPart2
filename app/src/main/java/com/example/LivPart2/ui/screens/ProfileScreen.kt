@@ -23,45 +23,55 @@ fun ProfileApp(navigator : DestinationsNavigator, modifier: Modifier = Modifier)
         modifier = modifier
             .fillMaxSize()
     ) {
-
-        Column(
-            modifier = Modifier
-                .background(MaterialTheme.colors.background),
-            verticalArrangement = Arrangement.Top,
+        Column(modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colors.background),
+            verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            LogOutButton()
-            ProfileHeader()
-
-        }
-
-        Column(modifier = Modifier
-            .padding(top=150.dp),
-        ) {
-            Row (horizontalArrangement = Arrangement.spacedBy(20.dp)
-            ){
-                HealthStats()
-                HealthStats2()
-            }
-        }
-        Column(modifier = Modifier
-            .padding(top=300.dp),
-        ) {
-            Row (horizontalArrangement = Arrangement.spacedBy(20.dp)
-            ){
-                ProfileGender()
-                ProfileHeight()
-                ProfileAge()
+            Column(
+                modifier = Modifier
+                    .background(MaterialTheme.colors.background),
+                verticalArrangement = Arrangement.Top,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                LogOutButton()
+                ProfileHeader()
 
             }
-        }
-        Column(modifier = Modifier
-            .padding(top=400.dp),){
-            Goals()
+
+            Column(modifier = Modifier
+                .padding(top=150.dp),
+            ) {
+                Row (horizontalArrangement = Arrangement.spacedBy(20.dp)
+                ){
+                    HealthStats()
+                    HealthStats2()
+                }
+            }
+            Column(modifier = Modifier
+                .padding(top=300.dp),
+            ) {
+                Row (horizontalArrangement = Arrangement.spacedBy(20.dp)
+                ){
+                    ProfileGender()
+                    ProfileHeight()
+                    ProfileAge()
+
+                }
+            }
+            Column(modifier = Modifier
+                .padding(top=400.dp),){
+                Goals()
+            }
+
+            BotNav(navigator)
         }
 
-        BotNav(navigator)
-    }
+            BotNav(navigator)
+
+        }
+
 }
 
 @Composable

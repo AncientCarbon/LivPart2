@@ -17,7 +17,9 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 @Composable
 fun BotNav(navigator: DestinationsNavigator){
     Row(
-        modifier = Modifier.fillMaxWidth().padding(0.dp,10.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(0.dp, 10.dp),
         verticalAlignment = Alignment.Bottom,
         horizontalArrangement = Arrangement.SpaceAround
 
@@ -25,10 +27,20 @@ fun BotNav(navigator: DestinationsNavigator){
         ChatbotButton(navigator)
         DashboardButton(navigator)
         DailyActivityButton(navigator)
-        ProfileButton(navigator)
-        SettingsButton(navigator)
+
     }
 }
+
+@Composable
+fun TopNav(navigator: DestinationsNavigator){
+    Row( modifier = Modifier.fillMaxWidth() ,verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.SpaceBetween) {
+        SettingsButton(navigator)
+        ProfileButton(navigator)
+    }
+
+
+}
+
 @Composable
 fun ChatbotButton(navigator: DestinationsNavigator){
     Button(

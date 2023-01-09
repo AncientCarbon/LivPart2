@@ -16,23 +16,27 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 fun ChatBotApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier) {
     Surface(modifier = modifier
         .fillMaxSize()) {
-        Column(modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colors.background),
-            verticalArrangement = Arrangement.Bottom,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Row(modifier = Modifier.padding(2.dp),
-                verticalAlignment = Alignment.Bottom) {
+        Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top) {
+            TopNav(navigator)
+            Column(modifier = Modifier
+                .fillMaxSize()
+                .background(MaterialTheme.colors.background),
+                verticalArrangement = Arrangement.Bottom,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Row(modifier = Modifier.padding(2.dp),
+                    verticalAlignment = Alignment.Bottom) {
 
-                EnterText()
-                SendButton()
+                    EnterText()
+                    SendButton()
+
+                }
+
+                BotNav(navigator)
 
             }
-
-            BotNav(navigator)
-
         }
+
 
     }
 
