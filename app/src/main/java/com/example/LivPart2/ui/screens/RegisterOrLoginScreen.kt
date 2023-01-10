@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.LivPart2.R
+import com.example.LivPart2.destinations.DailyActivityOverviewAppDestination
 import com.example.LivPart2.destinations.LoginScreenDestination
 import com.example.LivPart2.destinations.RegisterAppDestination
 import com.ramcosta.composedestinations.annotation.Destination
@@ -93,8 +94,7 @@ fun Register(navigator: DestinationsNavigator){
 fun AsGuest(navigator: DestinationsNavigator){
     Button(onClick = {
         navigator.navigate(
-            //TODO: make home screen
-            ""
+                DailyActivityOverviewAppDestination
         )
     },
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)

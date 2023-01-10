@@ -11,22 +11,23 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 
 @Destination
 @Composable
-fun RegisterApp(
+fun RegisterApp(navigator: DestinationsNavigator,
     modifier: Modifier = Modifier
     ) {
     Surface(modifier = modifier
         .fillMaxSize()) {
         Column(
             modifier = Modifier
-                .padding()
+                .padding(24.dp)
                 .background(MaterialTheme.colors.background),
             verticalArrangement = Arrangement.Top,
         ) {
-            Back()
+            Back1(navigator)
         }
         Column(modifier = Modifier
             .padding(24.dp)
@@ -121,19 +122,6 @@ fun Facebook() {
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.White)
     ) {
         Text("Sign up with Facebook")
-    }
-}
-
-@Composable
-fun Back() {
-    Button(onClick = { /*TODO*/ },
-        shape = RoundedCornerShape(50.dp),
-        modifier = Modifier
-            .padding(bottom = 150.dp)
-            .width(100.dp)
-            .height(35.dp)
-    ) {
-        Text(text = "Back")
     }
 }
 

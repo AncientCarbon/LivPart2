@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.LivPart2.destinations.RegisterOrLoginAppDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
@@ -35,7 +36,7 @@ fun ProfileApp(navigator : DestinationsNavigator, modifier: Modifier = Modifier)
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                LogOutButton()
+                LogOutButton(navigator)
                 ProfileHeader()
 
             }
@@ -106,9 +107,9 @@ fun HealthStats2(){
 }
 
 @Composable
-fun LogOutButton(){
+fun LogOutButton(navigator: DestinationsNavigator){
     Button(
-        onClick = { },
+        onClick = { navigator.navigate(RegisterOrLoginAppDestination)},
         shape = RoundedCornerShape(50.dp),
         modifier = Modifier
             .padding(top = 24.dp)

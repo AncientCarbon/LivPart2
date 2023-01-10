@@ -9,6 +9,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
@@ -29,43 +30,51 @@ fun DashboardApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier
     ) {
         Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top) {
             TopNav(navigator)
-            Column(
-                modifier = Modifier
-                    .padding()
-                    .background(MaterialTheme.colors.background),
-                verticalArrangement = Arrangement.Top,
+            Column(modifier = Modifier
+                .fillMaxSize()
+                .background(MaterialTheme.colors.background),
+                verticalArrangement = Arrangement.Bottom,
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Row(modifier = Modifier.fillMaxWidth()) {
-                    DateNow()
-                    PlusButton()
+
+                Column(
+                    modifier = Modifier
+                        .padding()
+                        .background(MaterialTheme.colors.background),
+                    verticalArrangement = Arrangement.Top,
+                ) {
+                    Row(modifier = Modifier.fillMaxWidth()) {
+                        DateNow()
+                        PlusButton()
+
+                    }
+                }
+                Column(
+                    modifier = Modifier
+                        .padding(top = 250.dp)
+                        .background(MaterialTheme.colors.background),
+                    verticalArrangement = Arrangement.Top,
+                ) {
 
                 }
-            }
-            Column(
-                modifier = Modifier
-                    .padding(top = 250.dp)
-                    .background(MaterialTheme.colors.background),
-                verticalArrangement = Arrangement.Top,
-            ) {
+                SearchBar()
+                Column(
+                    modifier = Modifier
+                        .padding(top = 400.dp)
+                        .verticalScroll(rememberScrollState()),
+                    verticalArrangement = Arrangement.Top,
+                ) {
 
-            }
-            SearchBar()
-            Column(
-                modifier = Modifier
-                    .padding(top = 400.dp)
-                    .verticalScroll(rememberScrollState()),
-                verticalArrangement = Arrangement.Top,
-            ) {
+                    Text(text = "Trends")
+                    Trend1()
+                    Trend2()
+                    Trend2()
+                    Trend2()
+                    Trend2()
 
-                Text(text = "Trends")
-                Trend1()
-                Trend2()
-                Trend2()
-                Trend2()
-                Trend2()
-
+                }
+                BotNav(navigator)
             }
-            BotNav(navigator)
         }
     }
 }
