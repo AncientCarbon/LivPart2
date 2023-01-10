@@ -17,6 +17,7 @@ import com.example.LivPart2.destinations.RegisterOrLoginAppDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
+
 @Destination
 @Composable
 fun ProfileApp(navigator : DestinationsNavigator, modifier: Modifier = Modifier) {
