@@ -4,7 +4,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
-import androidx.compose.material.*
+// import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,14 +30,14 @@ fun LoginScreen(
         Column(
             modifier = Modifier
                 .padding(24.dp)
-                .background(MaterialTheme.colors.background),
+                .background(MaterialTheme.colorScheme.background),
             verticalArrangement = Arrangement.Top,
         ) {
             Back1(navigator)
         }
         Column(modifier = Modifier
             .padding(100.dp)
-            .background(MaterialTheme.colors.background),
+            .background(MaterialTheme.colorScheme.background),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -62,23 +63,26 @@ Text input created following guide
 https://developer.android.com/jetpack/compose/text
  */
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Username1() {
-    var text by remember { mutableStateOf("") }
+    var mail by remember { mutableStateOf("") }
 
     TextField(
-        value = text,
-        onValueChange = { text = it },
+        value = mail,
+        singleLine = true,
+        onValueChange = { mail = it },
         label = { Text("Username") }
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Password1() {
-    var text1 by remember {
+    var password by remember {
         mutableStateOf((""))
     }
-    TextField(value = text1, onValueChange = { text1 = it },
+    TextField(value = password, onValueChange = { password = it }, singleLine = true,
         label = { Text("Password") })
 
 }
@@ -114,7 +118,7 @@ https://dev.to/manojbhadane/android-login-screen-using-jetpack-compose-part-1-50
 fun Press1(navigator: DestinationsNavigator) {
     Button( //Add if statement for this on click
         onClick = { navigator.navigate(
-            DailyActivityOverviewAppDestination
+            DailyActivityOverviewAppDestination,
         )},
         shape = RoundedCornerShape(50.dp),
         modifier = Modifier

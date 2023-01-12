@@ -3,7 +3,7 @@ package com.example.LivPart2.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,7 +20,7 @@ fun ChatBotApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier) 
             TopNav(navigator)
             Column(modifier = Modifier
                 .fillMaxSize()
-                .background(MaterialTheme.colors.background),
+                .background(MaterialTheme.colorScheme.background),
                 verticalArrangement = Arrangement.Bottom,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -42,6 +42,7 @@ fun ChatBotApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier) 
 
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EnterText() {
     var text by remember {
@@ -50,6 +51,7 @@ fun EnterText() {
     TextField(value = text,
         onValueChange = { text = it },
         label = { Text("Enter text here") },
+        singleLine = true,
         modifier = Modifier.width(335.dp))
 }
 

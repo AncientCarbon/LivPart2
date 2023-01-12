@@ -2,9 +2,7 @@ package com.example.LivPart2.ui.screens
 
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,7 +25,7 @@ fun Settings(navigator: DestinationsNavigator
 
         ) {
         Text(text = "Settings",
-            color = MaterialTheme.colors.background, fontSize = 20.sp, fontWeight = FontWeight.Bold
+            color = MaterialTheme.colorScheme.background, fontSize = 20.sp, fontWeight = FontWeight.Bold
         )
 
         Button(onClick = { /*TODO*/ }, modifier = Modifier.width(300.dp)) {

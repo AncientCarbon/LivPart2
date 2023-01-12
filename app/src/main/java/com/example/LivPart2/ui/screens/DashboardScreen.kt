@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -31,8 +31,8 @@ fun DashboardApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier
         Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top) {
             TopNav(navigator)
             Column(modifier = Modifier
-                .fillMaxSize()
-                .background(MaterialTheme.colors.background),
+                .weight(1f)
+                .background(MaterialTheme.colorScheme.background),
                 verticalArrangement = Arrangement.Bottom,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -40,7 +40,7 @@ fun DashboardApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier
                 Column(
                     modifier = Modifier
                         .padding()
-                        .background(MaterialTheme.colors.background),
+                        .background(MaterialTheme.colorScheme.background),
                     verticalArrangement = Arrangement.Top,
                 ) {
                     Row(modifier = Modifier.fillMaxWidth()) {
@@ -49,18 +49,9 @@ fun DashboardApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier
 
                     }
                 }
-                Column(
-                    modifier = Modifier
-                        .padding(top = 250.dp)
-                        .background(MaterialTheme.colors.background),
-                    verticalArrangement = Arrangement.Top,
-                ) {
-
-                }
                 SearchBar()
                 Column(
                     modifier = Modifier
-                        .padding(top = 400.dp)
                         .verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.Top,
                 ) {
@@ -73,8 +64,8 @@ fun DashboardApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier
                     Trend2()
 
                 }
-                BotNav(navigator)
             }
+            BotNav(navigator)
         }
     }
 }
@@ -105,6 +96,7 @@ fun PlusButton() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchBar(){
     var text by remember { mutableStateOf("") }

@@ -4,7 +4,7 @@ package com.example.LivPart2.ui.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,7 +29,7 @@ fun RegisterOrLoginApp(
     Surface(modifier = modifier
         .fillMaxSize()){
 
-        Column(modifier = Modifier.padding(24.dp).background(MaterialTheme.colors.background),
+        Column(modifier = Modifier.padding(24.dp).background(MaterialTheme.colorScheme.background),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -68,7 +68,7 @@ fun Login(navigator: DestinationsNavigator){
             LoginScreenDestination
         )
     },
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)
+        colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
     ) {
 
         Text("Log in")
@@ -84,7 +84,7 @@ fun Register(navigator: DestinationsNavigator){
             RegisterAppDestination
         )
     },
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)
+        colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
     ) {
         Text("Register")
     }
@@ -97,7 +97,7 @@ fun AsGuest(navigator: DestinationsNavigator){
                 DailyActivityOverviewAppDestination
         )
     },
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red)
+        colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
     ) {
         Text("Continue as guest")
 

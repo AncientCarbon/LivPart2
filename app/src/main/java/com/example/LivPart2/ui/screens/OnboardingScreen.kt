@@ -1,7 +1,7 @@
 package com.example.LivPart2
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -86,7 +86,7 @@ private fun GreetingBuilder(question: String) {
     val checkState = remember{ mutableStateOf(false) }
 
     Surface(
-        color = MaterialTheme.colors.background,
+        color = MaterialTheme.colorScheme.background,
         modifier = Modifier.padding(vertical = 20.dp, horizontal = 8.dp)
     ) {
         Row(modifier = Modifier.padding(20.dp)) {

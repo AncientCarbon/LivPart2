@@ -3,7 +3,7 @@ package com.example.LivPart2.ui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,14 +24,14 @@ fun RegisterApp(navigator: DestinationsNavigator,
         Column(
             modifier = Modifier
                 .padding(24.dp)
-                .background(MaterialTheme.colors.background),
+                .background(MaterialTheme.colorScheme.background),
             verticalArrangement = Arrangement.Top,
         ) {
             Back1(navigator)
         }
         Column(modifier = Modifier
             .padding(24.dp)
-            .background(MaterialTheme.colors.background),
+            .background(MaterialTheme.colorScheme.background),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -54,6 +54,7 @@ fun RegisterApp(navigator: DestinationsNavigator,
 
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Username() {
     var text by remember {
@@ -61,15 +62,18 @@ fun Username() {
     }
     TextField(value = text,
         onValueChange = { text = it },
+        singleLine = true,
         label = { Text("Username") })
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Password() {
     var text by remember {
         mutableStateOf("")
     }
     TextField(value = text,
+        singleLine = true,
         onValueChange = { text = it },
         label = { Text("Password") })
 }
@@ -96,7 +100,7 @@ fun Google() {
     },
         shape = RoundedCornerShape(50.dp),
 
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.White)
+        colors = ButtonDefaults.buttonColors(containerColor = Color.White)
     ) {
 
         Text("Sign up with Google")
@@ -119,7 +123,7 @@ fun Facebook() {
     },
         shape = RoundedCornerShape(50.dp),
 
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.White)
+        colors = ButtonDefaults.buttonColors(containerColor = Color.White)
     ) {
         Text("Sign up with Facebook")
     }
