@@ -72,7 +72,7 @@ fun Username1() {
         value = mail,
         singleLine = true,
         onValueChange = { mail = it },
-        label = { Text("Username") }
+        label = { Text("Email") }
     )
 }
 
@@ -99,14 +99,14 @@ fun ForgotUsername(navigator: DestinationsNavigator) {
             //TODO: Make screen
             ""
         )},
-        text = AnnotatedString("Forgot Password or Username?"),
+        text = AnnotatedString("Forgot Password?"),
         style = TextStyle(textDecoration = TextDecoration.Underline))
 }
 
 @Composable
 fun CreateUser() {
     ClickableText(onClick = {},
-        text = AnnotatedString("Create User"),
+        text = AnnotatedString("Create Account"),
         style = TextStyle(textDecoration = TextDecoration.Underline))
 }
 
