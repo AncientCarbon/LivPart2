@@ -61,6 +61,8 @@ fun ProfileApp(modifier: Modifier = Modifier) {
                 .padding(top=400.dp),){
             Settings()
             Account()
+            Connected()
+            Privacy()
         }
 
         BotNav()
@@ -85,6 +87,27 @@ fun Account(){
         .fillMaxWidth()
         .height(50.dp)) {
         Text(text = "Account")
+    }
+}
+
+@Composable
+fun Connected(){
+    Button(onClick = { /*TODO*/ }, modifier = Modifier
+        .padding()
+        .fillMaxWidth()
+        .height(50.dp)) {
+        Text(text = "Connected devices & Apps")
+    }
+}
+
+@Composable
+fun Privacy(){
+    Button(onClick = { /*TODO*/ }, modifier = Modifier
+        .padding()
+        .fillMaxWidth()
+        .height(50.dp)) {
+        Text(text = "Privacy & security")
+        
     }
 }
 
