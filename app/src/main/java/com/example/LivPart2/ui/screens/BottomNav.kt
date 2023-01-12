@@ -46,7 +46,7 @@ fun ChatbotButton(navigator: DestinationsNavigator){
             ChatBotAppDestination
         )},
         shape = RoundedCornerShape(50.dp),
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
+        colors = ButtonDefaults.buttonColors(containerColor = Color.Cyan),
         modifier = Modifier
             .padding(top = 24.dp)
             .width(50.dp)
@@ -64,7 +64,7 @@ fun DashboardButton(navigator: DestinationsNavigator){
             DashboardAppDestination
         )},
         shape = RoundedCornerShape(50.dp),
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
+        colors = ButtonDefaults.buttonColors(containerColor = Color.Cyan),
 
         modifier = Modifier
             .padding(top = 24.dp)
@@ -83,7 +83,7 @@ fun DailyActivityButton(navigator: DestinationsNavigator){
         )
          },
         shape = RoundedCornerShape(50.dp),
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
+        colors = ButtonDefaults.buttonColors(containerColor = Color.Cyan),
 
         modifier = Modifier
             .padding(top = 24.dp)
@@ -101,7 +101,7 @@ fun ProfileButton(navigator: DestinationsNavigator){
             ProfileAppDestination
         ) },
         shape = RoundedCornerShape(50.dp),
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
+        colors = ButtonDefaults.buttonColors(containerColor = Color.Cyan),
 
         modifier = Modifier
             .padding(top = 24.dp)
@@ -119,7 +119,7 @@ fun SettingsButton(navigator: DestinationsNavigator){
             SettingsDestination
         ) },
         shape = RoundedCornerShape(50.dp),
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan),
+        colors = ButtonDefaults.buttonColors(containerColor = Color.Cyan),
 
         modifier = Modifier
             .padding(top = 24.dp)
