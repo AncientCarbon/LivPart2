@@ -14,17 +14,23 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
+var uiState = mutableStateOf(LoginUIState())
+    private set
 
 @Preview(showBackground = true)
 @Composable
-fun MyApp(modifier: Modifier = Modifier) {
+fun LoginScreen(modifier: Modifier = Modifier) {
     Surface(modifier = modifier
             .fillMaxSize()) {
         Column(
                 modifier = Modifier
-                        .padding(24.dp)
-                        .background(MaterialTheme.colors.background),
+                    .padding(24.dp)
+                    .background(MaterialTheme.colors.background),
                 verticalArrangement = Arrangement.Top,
         ) {
             Back1()
