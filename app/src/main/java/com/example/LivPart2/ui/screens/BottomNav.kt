@@ -9,7 +9,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.LivPart2.destinations.*
+import com.example.destinations.*
+
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Composable

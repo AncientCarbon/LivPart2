@@ -12,9 +12,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.LivPart2.R
-import com.example.LivPart2.destinations.DailyActivityOverviewAppDestination
-import com.example.LivPart2.destinations.LoginScreenDestination
-import com.example.LivPart2.destinations.RegisterAppDestination
+
+import com.example.destinations.DailyActivityOverviewAppDestination
+import com.example.destinations.LoginScreenDestination
+import com.example.destinations.RegisterAppDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
