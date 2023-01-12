@@ -59,7 +59,8 @@ fun ProfileApp(modifier: Modifier = Modifier) {
         }
         Column(modifier = Modifier
                 .padding(top=400.dp),){
-            Goals()
+            Account()
+            Settings()
         }
 
         BotNav()
@@ -68,12 +69,23 @@ fun ProfileApp(modifier: Modifier = Modifier) {
 
 
 @Composable
-fun Goals(){
+fun Settings(){
     Button(onClick = { /*TODO*/ }, modifier = Modifier
-            .padding()
-            .fillMaxWidth()
-            .height(100.dp)) {
-        Text(text = "GOALS SUI")
+        .padding()
+        .fillMaxWidth()
+        .height(100.dp)) {
+        Text(text = "Settings")
+    }
+}
+
+@Composable
+fun Account(){
+    Button(onClick = { /*TODO*/ }, modifier = Modifier
+        .padding()
+        .fillMaxWidth()
+        .height(50.dp)) {
+        Text(text = "Account")
+
     }
 }
 
@@ -104,9 +116,9 @@ fun LogOutButton(){
             onClick = { },
             shape = RoundedCornerShape(50.dp),
             modifier = Modifier
-                    .padding(top = 24.dp)
-                    .width(150.dp)
-                    .height(50.dp)
+                .padding(top = 24.dp)
+                .width(150.dp)
+                .height(50.dp)
     ) {
         Text(text = "Log out")
     }
