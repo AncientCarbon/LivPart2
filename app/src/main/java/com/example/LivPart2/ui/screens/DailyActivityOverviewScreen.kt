@@ -1,25 +1,22 @@
-package com.example.livpart2
+package com.example.LivPart2.ui.screens
 
-import androidx.compose.foundation.gestures.Orientation
-import androidx.compose.foundation.gestures.ScrollableState
-import androidx.compose.foundation.gestures.scrollable
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.modifier.modifierLocalConsumer
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
-//seems like the scrollable parameter needs to be added to the
-    // parameters of the function, and NOT the surface or column
-
-
+@OptIn(ExperimentalMaterial3Api::class)
+@Destination
 @Composable
-fun DailyActivityOverviewApp() {
+fun DailyActivityOverviewApp(navigator: DestinationsNavigator) {
     Surface(
         modifier = Modifier
             .fillMaxSize()
@@ -40,6 +37,6 @@ fun DailyActivityOverviewApp() {
                 Text("Save")
             }
         }
-        BotNav()
+        BotNav(navigator)
     }
 }
