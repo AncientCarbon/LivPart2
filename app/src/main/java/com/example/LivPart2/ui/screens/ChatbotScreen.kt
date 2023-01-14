@@ -3,6 +3,8 @@ package com.example.LivPart2.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -57,11 +59,8 @@ fun EnterText() {
 
 @Composable
 fun SendButton(){
-    Button(onClick = { /*TODO*/ },
-        modifier = Modifier
-            .width(50.dp)
-            .height(50.dp)) {
-        Text(text = "Register")
+    IconButton(onClick = { /*TODO*/ }) {
+        Icon(Icons.Filled.Send, contentDescription = "SendButton")
     }
 }
 

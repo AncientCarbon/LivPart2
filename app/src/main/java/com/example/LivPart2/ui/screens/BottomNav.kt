@@ -1,17 +1,24 @@
 package com.example.LivPart2.ui.screens
 
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material3.*
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.LivPart2.destinations.*
+import com.example.LivPart2.destinations.ChatBotAppDestination
+import com.example.LivPart2.destinations.DailyActivityOverviewAppDestination
+import com.example.LivPart2.destinations.DashboardAppDestination
+import com.example.LivPart2.destinations.ProfileAppDestination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 /*
@@ -22,8 +29,8 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 fun BotNav(navigator: DestinationsNavigator) {
     Row(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(0.dp, 10.dp),
+        .fillMaxWidth()
+        .border(BorderStroke(2.dp, Color.Black)),
         verticalAlignment = Alignment.Bottom,
         horizontalArrangement = Arrangement.SpaceAround
 
@@ -41,7 +48,7 @@ fun BottomBarIconNav(navigator: DestinationsNavigator) {
             DailyActivityOverviewAppDestination
         )
     }) {
-        Icon(Icons.Filled.Menu, contentDescription = "Daily")
+        Icon(Icons.Filled.CalendarToday, contentDescription = "Daily")
     }
 
     IconButton(onClick = {
@@ -49,13 +56,13 @@ fun BottomBarIconNav(navigator: DestinationsNavigator) {
             DashboardAppDestination
         )
     }) {
-        Icon(Icons.Filled.Menu, contentDescription = "Dashboard")
+        Icon(Icons.Filled.Dashboard, contentDescription = "Dashboard")
     }
 
     IconButton(onClick = {
         /*TODO*/
     }) {
-        Icon(Icons.Filled.Menu, contentDescription = "Add stuff")
+        Icon(Icons.Filled.Add, contentDescription = "Add stuff")
     }
 
     IconButton(onClick = {
@@ -63,7 +70,7 @@ fun BottomBarIconNav(navigator: DestinationsNavigator) {
             ChatBotAppDestination
         )
     }) {
-        Icon(Icons.Filled.Menu, contentDescription = "Chatbot")
+        Icon(Icons.Filled.Chat, contentDescription = "Chatbot")
     }
 
     IconButton(onClick = {
@@ -71,7 +78,7 @@ fun BottomBarIconNav(navigator: DestinationsNavigator) {
             ProfileAppDestination
         )
     }) {
-        Icon(Icons.Filled.Menu, contentDescription = "Profile")
+        Icon(Icons.Filled.Person, contentDescription = "Profile")
     }
 }
 
