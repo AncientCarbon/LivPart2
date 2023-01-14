@@ -17,97 +17,58 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Destination
 @Composable
-fun ProfileApp(navigator : DestinationsNavigator, modifier: Modifier = Modifier) {
+fun ProfileApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier) {
     Surface(
         modifier = modifier
             .fillMaxSize()
     ) {
-        Column(modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background),
-            verticalArrangement = Arrangement.Bottom,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+        Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top) {
             Column(
                 modifier = Modifier
+                    .weight(1f)
                     .background(MaterialTheme.colorScheme.background),
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                LogOutButton(navigator)
                 ProfileHeader()
 
             }
-
-            Column(modifier = Modifier
-                .padding(top=150.dp),
-            ) {
-                Row (horizontalArrangement = Arrangement.spacedBy(20.dp)
-                ){
-                    HealthStats()
-                    HealthStats2()
-                }
-            }
-            Column(modifier = Modifier
-                .padding(top=300.dp),
-            ) {
-                Row (horizontalArrangement = Arrangement.spacedBy(20.dp)
-                ){
-                    ProfileGender()
-                    ProfileHeight()
-                    ProfileAge()
-
-                }
-            }
-            Column(modifier = Modifier
-                .padding(top=400.dp),){
-                Goals()
-            }
-
             BotNav(navigator)
         }
 
-            BotNav(navigator)
-
-        }
-
-}
-
-@Composable
-fun Goals(){
-    Button(onClick = { /*TODO*/ }, modifier = Modifier
-        .padding()
-        .fillMaxWidth()
-        .height(100.dp)) {
-        Text(text = "GOALS SUI")
     }
+
+}
+/*
+Alot of this code is not needed in the final prduct, although some methods should be called
+in the edit profile screen
+ */
+
+
+@Composable
+fun Birthday() {
+    Text(text = "2001/02/09")
 }
 
 @Composable
-fun ProfileAge(){
-    Text(text = "21")
-}
-@Composable
-fun ProfileGender(){
+fun ProfileGender() {
     Text(text = "Male")
 }
+
 @Composable
-fun ProfileHeight(){
+fun ProfileHeight() {
     Text(text = "192 cm")
-}
-@Composable
-fun HealthStats(){
-    Text(text = "Whatever the hell this is")
-}
-@Composable
-fun HealthStats2(){
-    Text(text = "Whatever the hell this is2")
 }
 
 @Composable
-fun LogOutButton(navigator: DestinationsNavigator){
+fun ProfileWeight() {
+    Text(text = "93.5kg")
+}
+
+@Composable
+fun LogOutButton(navigator: DestinationsNavigator) {
     Button(
-        onClick = { navigator.navigate(RegisterOrLoginAppDestination)},
+        onClick = { navigator.navigate(RegisterOrLoginAppDestination) },
         shape = RoundedCornerShape(50.dp),
         modifier = Modifier
             .padding(top = 24.dp)
@@ -117,6 +78,7 @@ fun LogOutButton(navigator: DestinationsNavigator){
         Text(text = "Log out")
     }
 }
+
 @Composable
 fun ProfileHeader() {
     Text(text = "Magnus Bruus", fontSize = 36.sp)

@@ -5,7 +5,6 @@ import android.Manifest.permission_group.ACTIVITY_RECOGNITION
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.LivPart2.Manifest
 
 /*
 Implementation made following guide
