@@ -17,7 +17,6 @@ fun ChatBotApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier) 
     Surface(modifier = modifier
         .fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top) {
-            TopNav(navigator)
             Column(modifier = Modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background),
@@ -33,6 +32,7 @@ fun ChatBotApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier) 
                 }
 
                 BotNav(navigator)
+
 
             }
         }

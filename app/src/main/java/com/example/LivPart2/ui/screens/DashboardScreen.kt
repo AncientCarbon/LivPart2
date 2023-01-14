@@ -29,7 +29,6 @@ fun DashboardApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier
             .fillMaxSize()
     ) {
         Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top) {
-            TopNav(navigator)
             Column(modifier = Modifier
                 .weight(1f)
                 .background(MaterialTheme.colorScheme.background),
