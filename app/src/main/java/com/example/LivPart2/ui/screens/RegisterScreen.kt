@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.LivPart2.dataPack.User
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
@@ -39,6 +40,7 @@ fun RegisterApp(navigator: DestinationsNavigator,
             Username()
             Password()
             Press()
+
         }
         Column(modifier = Modifier.padding(top = 200.dp),
             verticalArrangement = Arrangement.Center,

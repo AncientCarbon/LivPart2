@@ -101,34 +101,3 @@ private fun GreetingBuilder(question: String) {
         }
     }
 }
-
-
-
-
-/*
-@Preview(showBackground = true, widthDp = 320, heightDp = 320)
-@Composable
-fun OnboardingPreview() {
-    LivPart2Theme {
-        OnboardingScreen(onContinueClicked = {})
-    }
-}
- */
-
-/*@Preview(showBackground = true, widthDp = 320)
-@Composable
-fun DefaultPreview() {
-    LivPart2Theme {
-       Greetings(navigator = DestinationsNavigator)
-    }
-}
-
-
-@Preview
-@Composable
-fun MyAppPreview() {
-    LivPart2Theme {
-        val navController = rememberNavController()
-        OnboardingApp(Modifier.fillMaxSize(), navController)
-    }
-}*/

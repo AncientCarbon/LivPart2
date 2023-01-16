@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-class viewModel : ViewModel() {
+class ViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(UiState())
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 
@@ -14,7 +14,6 @@ class viewModel : ViewModel() {
         resetApp()
     }
 
-    //will hopefully log the user out when implemented
     fun resetApp() {
         _uiState.value = UiState()
     }

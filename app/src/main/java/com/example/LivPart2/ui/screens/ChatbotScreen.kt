@@ -69,7 +69,7 @@ fun ChatBotFigure(){
 
 @Composable
 fun Assist(){
-    Text(text = "How may I be of assist for you?", fontSize = 24.sp)
+    Text(text = "How can I assist you?", fontSize = 24.sp)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -88,7 +88,7 @@ fun EnterText() {
 @Composable
 fun SendButton(){
     IconButton(onClick = { /*TODO*/ }) {
-        Icon(Icons.Filled.Send, contentDescription = "SendButton")
+        Icon(Icons.Filled.Send, contentDescription = "Send")
     }
 }
 
