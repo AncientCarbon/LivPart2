@@ -6,10 +6,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.LivPart2.destinations.RegisterOrLoginAppDestination
+import com.example.livpart2.destinations.RegisterOrLoginAppDestination
 
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+
+//Onboarding made following this guide: https://developer.android.com/codelabs/jetpack-compose-basics#7
 
 @Destination(start = true)
 @Composable
