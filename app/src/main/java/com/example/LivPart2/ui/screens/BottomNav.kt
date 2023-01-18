@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
@@ -76,6 +77,7 @@ fun BottomBarIconNav(navigator: DestinationsNavigator) {
     IconButton(onClick = {
         navigator.navigate(
             ProfileAppDestination
+
         )
     }) {
         Icon(Icons.Filled.Person, contentDescription = "Profile")

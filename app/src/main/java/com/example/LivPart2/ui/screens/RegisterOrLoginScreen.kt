@@ -68,7 +68,6 @@ fun Login(navigator: DestinationsNavigator){
             LoginScreenDestination
         )
     },
-        colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
     ) {
 
         Text("Log in")
@@ -84,7 +83,6 @@ fun Register(navigator: DestinationsNavigator){
             RegisterAppDestination
         )
     },
-        colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
     ) {
         Text("Register")
     }
@@ -97,7 +95,6 @@ fun AsGuest(navigator: DestinationsNavigator){
                 DailyActivityOverviewAppDestination
         )
     },
-        colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
     ) {
         Text("Continue as guest")
 
