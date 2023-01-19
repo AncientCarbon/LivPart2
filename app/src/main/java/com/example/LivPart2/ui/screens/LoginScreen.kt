@@ -141,7 +141,10 @@ fun Back1(navigator: DestinationsNavigator) {
             .padding()
 
             .width(100.dp)
-            .height(35.dp)
+            .height(35.dp),
+        colors = ButtonDefaults.buttonColors(
+            MaterialTheme.colorScheme.primary
+        )
     ) {
         Text(text = "Back")
     }
