@@ -44,7 +44,7 @@ fun DashboardApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier
                 ) {
                     Row(modifier = Modifier.fillMaxWidth()) {
                         DateNow()
-                        PlusButton()
+                        
 
                     }
                 }
@@ -80,20 +80,6 @@ fun DateNow(){
     Text(text = currentDate, textAlign = TextAlign.Left)
 }
 
-/*
-Circular button implementation based on the following link:
-https://www.geeksforgeeks.org/create-a-circular-button-with-an-icon-in-android-jetpack-compose/
- */
-@Composable
-fun PlusButton() {
-    Button(onClick = { /*TODO*/ }, modifier = Modifier.size(50.dp),
-        shape = CircleShape,
-        border = BorderStroke(5.dp, Color(0XFF0F9D58))
-
-    ) {
-        Text(text = "+", fontSize = 35.sp)
-    }
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -121,6 +107,6 @@ fun Trend2(){
         Modifier
             .fillMaxWidth()
             .padding(top = 10.dp)) {
-        Text(text = "Flinke Flemming is flink for more than 2 years in a row without bein not flink", fontSize = 25.sp)
+        Text(text = "Conor Mcgregor knocks out Khabib in the fifth round!", fontSize = 25.sp)
     }
 }

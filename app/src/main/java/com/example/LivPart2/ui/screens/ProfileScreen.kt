@@ -40,10 +40,10 @@ fun ProfileApp(navigator: DestinationsNavigator, modifier: Modifier = Modifier) 
 
             Column(
                     modifier = Modifier
-                            .padding(10.dp)
-                            .padding(top = 50.dp)
-                            .weight(1f)
-                            .background(MaterialTheme.colorScheme.background),
+                        .padding(10.dp)
+                        .padding(top = 50.dp)
+                        .weight(1f)
+                        .background(MaterialTheme.colorScheme.background),
                     verticalArrangement = Arrangement.Top,
                     horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -148,7 +148,8 @@ fun Privacy() {
         Button(onClick = { /*TODO*/ }, modifier = Modifier
                 .padding()
                 .width(300.dp)
-                .height(50.dp)) {
+                .height(50.dp),
+        ) {
             Text(text = "Privacy & Security")
         }
 
@@ -179,7 +180,10 @@ fun LogOutButton(navigator: DestinationsNavigator) {
             modifier = Modifier
                     .padding(top = 24.dp)
                     .width(150.dp)
-                    .height(50.dp)
+                    .height(50.dp),
+        colors = ButtonDefaults.buttonColors(
+            MaterialTheme.colorScheme.primary
+        )
     ) {
         Text(text = "Log out")
     }
