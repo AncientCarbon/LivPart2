@@ -1,0 +1,31 @@
+Index: app/src/main/java/com/example/LivPart2/Model/service/implementation/StorageServiceImplementation.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.livpart2.model.service.implementation\r\n\r\nimport com.example.livpart2.model.service.AccountService\r\nimport com.example.livpart2.model.service.StorageService\r\nimport com.example.livpart2.model.service.trace\r\nimport com.google.firebase.firestore.CollectionReference\r\nimport com.google.firebase.firestore.FirebaseFirestore\r\nimport com.google.firebase.firestore.ktx.snapshots\r\nimport com.google.firebase.firestore.ktx.toObject\r\nimport com.google.firebase.firestore.ktx.toObjects\r\nimport javax.inject.Inject\r\nimport kotlinx.coroutines.awaitAll\r\nimport kotlinx.coroutines.flow.Flow\r\nimport kotlinx.coroutines.flow.flatMapLatest\r\nimport kotlinx.coroutines.flow.map\r\nimport kotlinx.coroutines.tasks.asDeferred\r\nimport kotlinx.coroutines.tasks.await\r\n\r\nclass StorageServiceImpl\r\n@Inject\r\nconstructor(private val firestore: FirebaseFirestore, private val auth: AccountService) :\r\n    StorageService {\r\n    override suspend fun delete(userId: String) {\r\n        currentCollection(auth.currentUserId).document(userId).delete().await()\r\n    }\r\n    private fun currentCollection(uid: String): CollectionReference =\r\n        firestore.collection(USER_COLLECTION)\r\n\r\n    companion object {\r\n        private const val USER_COLLECTION = \"users\"\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/LivPart2/Model/service/implementation/StorageServiceImplementation.kt b/app/src/main/java/com/example/LivPart2/Model/service/implementation/StorageServiceImplementation.kt
+--- a/app/src/main/java/com/example/LivPart2/Model/service/implementation/StorageServiceImplementation.kt	(revision 345706f08a2ce288171b35ccc6271025b69898d0)
++++ b/app/src/main/java/com/example/LivPart2/Model/service/implementation/StorageServiceImplementation.kt	(date 1674219751799)
+@@ -2,19 +2,10 @@
+ 
+ import com.example.livpart2.model.service.AccountService
+ import com.example.livpart2.model.service.StorageService
+-import com.example.livpart2.model.service.trace
+ import com.google.firebase.firestore.CollectionReference
+ import com.google.firebase.firestore.FirebaseFirestore
+-import com.google.firebase.firestore.ktx.snapshots
+-import com.google.firebase.firestore.ktx.toObject
+-import com.google.firebase.firestore.ktx.toObjects
+-import javax.inject.Inject
+-import kotlinx.coroutines.awaitAll
+-import kotlinx.coroutines.flow.Flow
+-import kotlinx.coroutines.flow.flatMapLatest
+-import kotlinx.coroutines.flow.map
+-import kotlinx.coroutines.tasks.asDeferred
+ import kotlinx.coroutines.tasks.await
++import javax.inject.Inject
+ 
+ class StorageServiceImpl
+ @Inject
