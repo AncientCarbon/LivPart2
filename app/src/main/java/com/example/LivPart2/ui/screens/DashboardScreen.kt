@@ -95,6 +95,7 @@ fun SearchBar(){
     )
 }
 
+
 @Composable
 fun Trend1(){
     Button(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth()) {
